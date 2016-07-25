@@ -12,7 +12,15 @@ recipe 'openvpn::default', 'Installs and configures OpenVPN.'
 recipe 'openvpn::sysctl', 'Configures IP forwarding via sysctl.'
 recipe 'openvpn::iptables', 'Configures postrouting via iptables.'
 
-%w( ubuntu debian redhat centos fedora scientific amazon ).each do |os|
+%w(
+  amazon
+  centos
+  debian
+  fedora
+  redhat
+  scientific
+  ubuntu
+).each do |os|
   supports os
 end
 
