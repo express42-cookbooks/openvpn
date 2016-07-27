@@ -16,7 +16,3 @@ end
 group :kitchen_vagrant do
   gem 'kitchen-vagrant'
 end
-
-group :kitchen_cloud do
-  gem 'kitchen-digitalocean'
-end
