@@ -4,7 +4,7 @@ maintainer_email 'cookbooks@express42.com'
 license          'MIT'
 description      'Installs and configures OpenVPN.'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.6'
+version          '0.1.7'
 source_url 'https://github.com/express42-cookbooks/openvpn' if respond_to?(:source_url)
 issues_url 'https://github.com/express42-cookbooks/openvpn/issues' if respond_to?(:issues_url)
 
