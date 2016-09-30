@@ -67,3 +67,6 @@ default['openvpn']['default']['ccd_exclusive'] = false
 
 default['openvpn']['default']['users'] = []
 default['openvpn']['default']['revoked_users'] = []
+
+# Names of remote servers for client configuration
+default['openvpn']['client']['remote_servers'] = []

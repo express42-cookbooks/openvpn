@@ -53,7 +53,8 @@ Installs and configures OpenVPN.
 * `node['openvpn']['default']['ccd_exclusive']` -  Defaults to `"false"`.
 * `node['openvpn']['default']['users']` -  Defaults to `"[ ... ]"`.
 * `node['openvpn']['default']['revoked_users']` -  Defaults to `"[ ... ]"`.
-* `node['openvpn']['default']['ifconfig_pool_persist']` - Defaults to `"true"`
+* `node['openvpn']['default']['ifconfig_pool_persist']` - Defaults to `"true"`.
+* `node['openvpn']['client']['remote_servers']` - Defaults to `"[ ... ]"`.
 
 ## Iptables
 
@@ -69,6 +70,7 @@ Installs and configures OpenVPN.
 * openvpn::default - Installs and configures OpenVPN.
 * openvpn::sysctl - Configures IP forwarding via sysctl
 * openvpn::iptables - Configures postrouting via iptables
+* openvpn::client - Configures client connection to server
 
 # Server Modes
 
@@ -110,6 +112,7 @@ See fixture cookbook in `tests/fixtures/cookbooks`.
 
 1. Revoke access
 2. Import existing certs/keys
+3. Add support for client recipe-friendly config generation
 
 
 # Usage
@@ -194,6 +197,18 @@ resulting archive contains config (.ovpn), ca cert, John's cert and key
   knife data bag from file openvpn-office data_bags/openvpn-office/openvpn-crl.json
   ```
 
+# Client configuration
+
+* Add ```recipe[openvpn::client]``` to run_list
+
+* Add data bag item for each server in ```node['openvpn']['client']['remote_servers']``` containing next elements (replace new lines with '\n'):
+
+  ```
+  "ca" - contents of ca.crt generated with knife-openvpn
+  "crt" - contents of client's certificate
+  "key" - contents of client's private key
+  "conf" - contents of client's configuration
+  ```
 
 # License and Maintainer
 

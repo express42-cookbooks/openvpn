@@ -2,9 +2,13 @@
 
 This file is used to list changes made in each version of the openvpn cookbook.
 
+0.1.7
+-----
+- Added support for client configuration
+
 0.1.6
 -----
-- New attribute ifconfig_pool_persist (bool). 
+- New attribute ifconfig_pool_persist (bool)
 
 0.1.5
 -----
