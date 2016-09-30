@@ -35,7 +35,7 @@ group 'openvpn' do
   members ['openvpn']
 end
 
-directory "/etc/openvpn/" do
+directory '/etc/openvpn/' do
   owner 'root'
   group 'openvpn'
   mode '0770'
@@ -48,7 +48,7 @@ directory '/var/log/openvpn' do
 end
 
 node['openvpn']['client']['remote_servers'].each do |server_name|
-  client_item = Chef::EncryptedDataBagItem.load("openvpn-client", "#{server_name}")
+  client_item = Chef::EncryptedDataBagItem.load('openvpn-client', server_name.to_s)
 
   files = {
     "#{server_name}-ca.crt" => client_item['ca'],
