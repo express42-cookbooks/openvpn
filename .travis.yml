@@ -3,8 +3,7 @@ cache: bundler
 rvm:
 - 2.2.2
 script:
-- bundle exec rubocop
-- bundle exec foodcritic --contex --epic-fail any .
+- bundle exec cookstyle
 sudo: false
 notifications:
   slack:
