@@ -35,7 +35,7 @@ class Chef
 
         ta_item = {
           'id' => 'openvpn-ta',
-          'ta' => key_data
+          'ta' => key_data,
         }
 
         databag_item = Chef::DataBagItem.from_hash(

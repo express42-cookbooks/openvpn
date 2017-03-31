@@ -54,7 +54,7 @@ node['openvpn']['client']['remote_servers'].each do |server_name|
     "#{server_name}-ca.crt" => client_item['ca'],
     "#{server_name}.crt" => client_item['crt'],
     "#{server_name}.key" => client_item['key'],
-    "#{server_name}.conf" => client_item['conf']
+    "#{server_name}.conf" => client_item['conf'],
   }
 
   service_name = node['platform_family'] == 'rhel' && node['platform_version'].to_f >= 7.0 ? "openvpn@#{server_name}" : 'openvpn'

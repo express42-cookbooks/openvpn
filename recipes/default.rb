@@ -120,7 +120,7 @@ files = {
   'dh.pem' => dh_item['dh'],
   'crl.pem' => crl_item['crl'],
   'server.crt' => server_item['cert'],
-  'server.key' => server_item['key']
+  'server.key' => server_item['key'],
 }
 
 files['ta.key'] = ta_item['ta'] if config['use_tls_auth'] && ta_item.include?('ta')
