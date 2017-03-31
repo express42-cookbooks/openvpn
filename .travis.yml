@@ -4,6 +4,7 @@ rvm:
 - 2.2.2
 script:
 - bundle exec cookstyle
+- bundle exec foodcritic --contex --epic-fail any .
 sudo: false
 notifications:
   slack:
