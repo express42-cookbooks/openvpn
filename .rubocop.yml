@@ -1,0 +1,8 @@
+LineLength:
+    Enabled: false
+SpaceBeforeFirstArg:
+    Enabled: false
+AbcSize:
+    Enabled: false
+MethodLength:
+    Enabled: false
