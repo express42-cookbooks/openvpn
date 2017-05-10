@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/express42-cookbooks/openvpn.svg?branch=master)](https://travis-ci.org/express42-cookbooks/openvpn)
+[![Build Status](https://travis-ci.org/express42/openvpn.svg?branch=master)](https://travis-ci.org/express42/openvpn)
 
 # Description
 
